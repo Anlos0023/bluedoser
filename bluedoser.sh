@@ -21,22 +21,22 @@ echo -e "$yellow| |_) | | |_| |  __/ (_| | (_) \__ \  __/ |   $nc"
 echo -e "$red|blue/|_|\__,_|\dos|\__,_|\___/|___/\___|_| $nc"
 echo -e "$blue _____________________________________By Anon$nc"
 echo ""
-echo -e "Author : SURAJ CHAVDA"
-echo -e "SCRIPT : SURAJ CHAVDA"
-echo -e "ANON   : SURAJ CHAVDA"
+echo -e "$white Author : SURAJ CHAVDA$nc"
+echo -e "$white SCRIPT : SURAJ CHAVDA$nc"
+echo -e "$white ANON   : SURAJ CHAVDA$nc"
 sudo lsmod | grep blue &>/dev/null
 systemctl enable bluetooth.service &>/dev/null
 systemctl start bluetooth.service &>/dev/null
-
+echo ""
 if rfkill unblock bluetooth ;then 
-echo -e "Your Bluetooth is Turned On"
+echo -e "$red Your Bluetooth is Turned On$nc"
 else echo -e "Some Problem With Turning On Bluetooth"
 fi
 echo -e ""
 
 echo -e "$Cyan [*]BLUTOOTH DEVICE(B.D) INFO AND SCANNING$nc"
 echo -e ""
-hcitool scan
+xterm -e 'while [ 1 ]; do hcitool can ;done'
 read -p $'\033[1;33m[*]Enter B.D.Address (xx:xx:xx:xx:xx:xx) : \033[0m' bdadd
 echo -e "" 
 read -p $'\033[1;33m[*]PRESS ENTER TO START YOUR ATTACK\033[0m'
@@ -45,4 +45,4 @@ fi
 
 rfkill block bluetooth &>/dev/null
 
-echo -e "Tool By Anon(Suraj)"
+echo -e "$yellow Tool By Anon(Suraj)$nc"
